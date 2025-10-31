@@ -16,8 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api import views as api_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # adds all Google OAuth routes
+
+    # after allauth, mint JWTs and go to Streamlit with tokens
+    path('login/success/', api_views.login_success, name='login-success'),
+
+    # protected endpoints and token refresh
+    path('api/me/', api_views.me),
+    path('api/protected-data/', api_views.protected_data),
+    path('api/token/refresh/', api_views.token_refresh),
 ]
