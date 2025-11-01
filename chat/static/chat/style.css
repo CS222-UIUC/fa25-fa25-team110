@@ -1,0 +1,19 @@
+:root{
+  --bg:#0f1724; /* dark */
+  --card:#0b1220;
+  --accent:#7c3aed;
+  --muted:#9ca3af;
+  --text:#e6eef8;
+}
+body{font-family:Inter, system-ui, Arial, sans-serif;background:linear-gradient(180deg,#071225, #071a2a);color:var(--text);height:100vh;margin:0;display:flex;align-items:center;justify-content:center}
+.chat-app{width:min(720px,96vw);background:var(--card);border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(2,6,23,.6)}
+.chat-app h1{margin:0 0 12px 0;font-size:20px}
+.messages{height:360px;overflow:auto;padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);margin-bottom:12px}
+.msg{margin-bottom:10px;display:flex}
+.msg.user{justify-content:flex-end}
+.bubble{max-width:75%;padding:10px 12px;border-radius:12px;background:#07102a;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.bubble.bot{background:rgba(255,255,255,.04)}
+.chat-form{display:flex;gap:8px}
+#message-input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:transparent;color:var(--text)}
+button{background:var(--accent);border:none;padding:10px 14px;border-radius:8px;color:white;cursor:pointer}
+button:active{transform:translateY(1px)}
