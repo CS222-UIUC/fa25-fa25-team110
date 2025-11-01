@@ -14,11 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),  # adds all Google OAuth routes
-    path('api/auth/', include('accounts.urls')),  # your custom auth endpoints
+    path("admin/", admin.site.urls),
+    path("accounts/", include("allauth.urls")),  # adds all Google OAuth routes
+    path("api/auth/", include("accounts.urls")),  # your custom auth endpoints
 ]
