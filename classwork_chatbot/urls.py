@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # adds all Google OAuth routes
+    path('api/auth/', include('accounts.urls')),  # your custom auth endpoints
 ]
