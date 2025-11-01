@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # adds all Google OAuth routes
     path('api/auth/', include('accounts.urls')),  # your custom auth endpoints
+    # Chat frontend and demo API
+    path('', include('chat.urls')),
 ]

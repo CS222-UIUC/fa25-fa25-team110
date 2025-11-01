@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     'rest_framework',  # For API endpoints
     'accounts', 
+    'chat',
 ]
 
 SITE_ID = 1
