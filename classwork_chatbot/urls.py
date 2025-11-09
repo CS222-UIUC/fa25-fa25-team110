@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
 
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('api/auth/', include('accounts.urls')),  # Julia’s login/register
+#     #path('api/', include('chat.urls')),           # Stephanie’s chat API
+# ]
 urlpatterns = [
+    path('', lambda request: HttpResponse("✅ Django backend is running successfully!")),
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),  # adds all Google OAuth routes
-    path('api/auth/', include('accounts.urls')),  # your custom auth endpoints
+    path('api/auth/', include('accounts.urls')),
 ]
